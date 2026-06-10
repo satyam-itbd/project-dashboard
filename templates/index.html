@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
     <title>Project Dashboard</title>
     <style>
         :root {
@@ -70,6 +71,15 @@
             display: flex;
             align-items: center;
             gap: 12px;
+        }
+
+        .company-logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 14px;
+            box-shadow: 0 10px 24px rgba(130, 148, 181, 0.18);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 4px;
         }
 
         h1 {
@@ -329,6 +339,7 @@
         <section class="topbar">
             <div>
                 <div class="title">
+                    <img src="{{ url_for('static', filename='company-logo.svg') }}" alt="Continuous Networks logo" class="company-logo">
                     <h1>Project Dashboard</h1>
                 </div>
                 <!-- <p class="subtitle">
